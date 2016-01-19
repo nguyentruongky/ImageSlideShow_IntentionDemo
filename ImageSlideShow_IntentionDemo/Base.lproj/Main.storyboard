@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageSlideShow_IntentionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qh-DU-sUW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SGd-pN-gpe" id="cur-0M-bYk"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="S9t-Rd-qEa">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BP8-Wj-kQ8"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9qh-DU-sUW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Rl-CC-Oxx"/>
+                            <constraint firstItem="9qh-DU-sUW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6JW-Cu-rbO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S9t-Rd-qEa" secondAttribute="bottom" id="LCe-O2-dLk"/>
+                            <constraint firstItem="S9t-Rd-qEa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N66-sg-1wj"/>
+                            <constraint firstAttribute="bottom" secondItem="9qh-DU-sUW" secondAttribute="bottom" id="X7U-l5-J1Y"/>
+                            <constraint firstAttribute="trailing" secondItem="9qh-DU-sUW" secondAttribute="trailing" id="fXr-Ww-vKy"/>
+                            <constraint firstAttribute="trailing" secondItem="S9t-Rd-qEa" secondAttribute="trailing" id="qq4-TO-4OY"/>
+                            <constraint firstItem="S9t-Rd-qEa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zbW-Bj-iiy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zbW-Bj-iiy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="slideShowIntention" destination="SGd-pN-gpe" id="K6E-o0-mLY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="SGd-pN-gpe" customClass="ImageSlideShowIntention" customModule="ImageSlideShow_IntentionDemo" customModuleProvider="target">
+                    <connections>
+                        <outlet property="indicatorPageControl" destination="S9t-Rd-qEa" id="hlT-fs-9jW"/>
+                        <outlet property="scrollView" destination="9qh-DU-sUW" id="c7s-ZF-FZs"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="218" y="339"/>
+        </scene>
+    </scenes>
+</document>
